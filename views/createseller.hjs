@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Create Seller</h1>
+
+
+    <form action="/sellers/addSeller" method="post">
+      <input type="text" name="organizationAvatarURL" placeholder="organizationAvatarURL" /><br />
+      <input type="text" name="organizationName" placeholder="organizationName" /><br />
+      <input type="text" name="orderReference" placeholder="orderReference" /><br />
+      <input type="text" name="waakyePrice" placeholder="Minimum price waakye" /><br />
+      <input type="text" name="ricePrice" placeholder="Minimum price rice" /><br />
+      <input type="text" name="gariPrice" placeholder="Minimum price gari" /><br />
+      <input type="text" name="spaghettiPrice" placeholder="Minimum price spaghetti" /><br />
+      <input type="text" name="plantainPrice" placeholder="Minimum price plantain" /><br />
+      <input type="text" name="chickenPrice" placeholder="Minimum price chicken" /><br />
+      <input type="text" name="fishPrice" placeholder="Minimum price fish" /><br />
+      <input type="text" name="welePrice" placeholder="Minimum price wele" /><br />
+      <input type="text" name="eggPrice" placeholder="Minimum price egg" /><br />
+      <input type="text" name="meatPrice" placeholder="Minimum price meat" /><br />
+      <input type="text" name="latitudeCoordinate" placeholder="latitude" /><br />
+      <input type="text" name="longitudeCoordinate" placeholder="longitude" /><br />
+      <input type="text" name="cityLocation" placeholder="location" /><br />
+      <input type="text" name="sellerDescription" placeholder="sellerDescription" /><br />
+      <input type="submit" value="Create Seller"/>
+    </form>
+  </body>
+</html>
+
+addedAt:timer.setTime(),
+         organizationAvatarURL: params.organizationAvatarURL,
+         organizationName: params.organizationName,
+         orderReference: params.orderReference,
+         carbDetail:{
+            waakyePrice: params.waakyePrice,
+            ricePrice: params.ricePrice,
+            gariPrice: params.gariPrice,
+            spaghettiPrice: params.spaghettiPrice,
+            plantainPrice: params.plantainPrice
+         },
+         proteinDetail:{
+            chickenPrice: params.chickenPrice,
+            fishPrice: params.fishPrice,
+            welePrice: params.welePrice,
+            eggPrice: params.eggPrice,
+            meatPrice: params.meatPrice
+         },
+         sellerPosition: {
+          latitudeCoordinate: params.latitudeCoordinate,
+          longitudeCoordinate: params.longitudeCoordinate
+         },
+         cityLocation: params.cityLocation,
+         sellerDescription: params.sellerDescription,
